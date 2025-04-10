@@ -1,0 +1,131 @@
+
+* {
+    font-family: "Poppins", sans-serif; 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: #f4f4f4; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+/* Título principal */
+h2 {
+    text-align: center; 
+    text-transform: uppercase; 
+    color: #005fbf; 
+    margin-bottom: 20px; 
+}
+
+
+.container {
+    background-color: white;
+    width: 80%; 
+    max-width: 500px;
+    margin: 20px;
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.input {
+    display: block; 
+    margin-bottom: 15px;
+    padding: 12px; 
+    width: 100%; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    font-size: 1em; 
+}
+
+
+.form-label {
+    font-weight: bold; 
+    display: block; 
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    color: #333;
+}
+
+
+.btn {
+    padding: 12px 25px; 
+    background-color: #008cff; 
+    color: white; 
+    border: none; 
+    border-radius: 6px;
+    cursor: pointer; 
+    margin-top: 20px; 
+    font-size: 1em; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #3d8afe; 
+}
+
+
+#mensagemErro {
+    color: red; 
+    font-size: 0.9em; 
+    margin-top: 15px; 
+    display: none; 
+}
+
+.invalido {
+    border: 2px solid red; 
+}
+
+footer {
+    background-color: #f0f0f0; 
+    color: #333; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+
+.developed-by {
+    font-size: 0.9em; 
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%; 
+        padding: 20px;
+        margin: 10px; 
+    }
+
+    h2 {
+        font-size: 1.5em; 
+        margin-bottom: 15px;
+    }
+
+    .input {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+
+    .erro {
+        font-size: 0.85em;
+        margin-top: 8px;
+    }
+
+    #mensagemErro {
+        font-size: 0.85em;
+        margin-top: 10px;
+    }
+}

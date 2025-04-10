@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2>Formulário de Cadastro</h2>
+    </header>
+
+    <div class="container">
+        <form id="formCadastro">
+            <label class="form-label">Nome:</label>
+            <input type="text" id="nome" class="input">
+
+            <label class="form-label">Email:</label>
+            <input type="email" id="email" class="input">
+
+            <label class="form-label">Senha:</label>
+            <input type="password" id="senha" class="input">
+
+            <button type="button" id="btnEnviar" class="btn">Cadastrar</button>
+            <p id="mensagemErro">Preencha todos os campos corretamente.</p>
+        </form>
+
+        <section>
+            <h3>Usuários Cadastrados:</h3>
+            <ul id="listaUsuarios">
+                <!-- nomes aparecerão aqui -->
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p class="developed-by">Desenvolvido por CaioGotardo MatheusOliveira NatanBernardini</p>
+    </footer>
+
+
+ </body>
+
+</html>
