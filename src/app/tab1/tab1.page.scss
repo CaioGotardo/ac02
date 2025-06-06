@@ -1,0 +1,102 @@
+ion-toolbar {
+  text-align: center;
+}
+
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  ion-item {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--ion-item-background, #2c2c2c);
+
+    min-height: 60px;
+
+    ion-label {
+      position: absolute;
+      top: 5px;
+      left: 16px;
+      font-size: 0.85em;
+      color: var(--ion-color-medium);
+      z-index: 1;
+      transition: all 0.2s ease-in-out;
+
+      &.ion-focused, &.ion-dirty {
+         top: 5px;
+         font-size: 0.7em;
+      }
+    }
+
+    ion-input {
+      --padding-top: 25px;
+      --padding-bottom: 10px;
+      --padding-start: 0;
+      --padding-end: 0;
+
+      font-size: 1.1em;
+      color: #fff;
+    }
+  }
+
+  ion-input {
+    ::part(native) {
+      padding-top: 25px !important;
+      padding-bottom: 10px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    ::part(placeholder) {
+      padding-top: 25px !important;
+    }
+  }
+
+  ion-button {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 25px;
+    height: 50px;
+    font-size: 1.2em;
+    --border-radius: 8px;
+    --background: var(--ion-color-primary);
+    --color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      --background: var(--ion-color-primary-shade);
+    }
+  }
+
+  .resultado-p {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--ion-color-light);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--ion-color-tertiary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--ion-color-medium-tint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:empty {
+        display: none;
+    }
+  }
+}

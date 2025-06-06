@@ -1,17 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Empréstimo Bancário </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-item>
+  <ion-label position="floating">Valor do Empréstimo</ion-label>
+  <ion-input
+  type="number"
+    placeholder="Em Reais (R$)"
+    [(ngModel)]="v"
+  ></ion-input>
+</ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-item>
+  <ion-label position="floating">Taxa de juros anual</ion-label>
+  <ion-input
+    type="number"
+    placeholder="em porcentagem (%)"
+    [(ngModel)]="i"
+  ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Meses pra quitar</ion-label>
+  <ion-input
+    type="number"
+    placeholder="em meses"
+    [(ngModel)]="n"
+  ></ion-input>
+</ion-item>
+
+
+
+
+  <ion-button expand="block" (click)="calculoParcela()">calcular </ion-button>
+
+  <ion-label class="resultado-p">{{this.p}}</ion-label>
 </ion-content>
