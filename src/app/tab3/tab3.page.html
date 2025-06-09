@@ -7,11 +7,21 @@ Despesas Mensais
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item *ngIf="listaDespesas">
+  </ion-item>
+  <ion-alert
+  trigger="ver-mensagem"
+  header="AVISO!"
+  message="{{mensagem}}"
+  [buttons]="alertButtons"
+  ></ion-alert>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item *ngFor="let despesas of listaDespesas">
+      <ion-label> Renda Liquida: {{despesas.rendaLiquida}}</ion-label>
+  <ion-label> alimentos: {{despesas.alimeticios}}</ion-label>
+  <ion-label> saidas: {{despesas.saidas}}</ion-label>
+  <ion-label> moradia : {{despesas.moradia}}</ion-label>
+  <ion-label> transporte: {{despesas.transporte}}</ion-label>
+</ion-item>
+<ion-button expand="block" id="ver-mensagem" (click)="verificarRendaLiquida()">calcular </ion-button>
 </ion-content>
