@@ -5,6 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-alert
+  trigger="ver-mensagem"
+  header="AVISO!"
+  message="{{mensagem}}"
+  [buttons]="alertButtons"
+  ></ion-alert>
+
   <ion-item>
     <ion-label position="floating">Valor inicial investido</ion-label>
     <ion-input
@@ -41,7 +49,7 @@
     ></ion-input>
   </ion-item>
 
-  <ion-button expand="block" (click)="calculo()">calcular </ion-button>
+  <ion-button expand="block" id="ver-mensagem" (click)="calculo()">calcular </ion-button>
 
   <ion-label class="resultado-m">Montante: R$ {{ m.toFixed(2) }}</ion-label>
 </ion-content>

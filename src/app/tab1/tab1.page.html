@@ -4,7 +4,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
+
+  <ion-alert
+  trigger="ver-mensagem"
+  header="AVISO!"
+  message="{{mensagem}}"
+  [buttons]="alertButtons"
+  ></ion-alert>
+
 <ion-item>
   <ion-label position="floating">Valor do Empréstimo</ion-label>
   <ion-input
@@ -35,7 +43,7 @@
 
 
 
-  <ion-button expand="block" (click)="calculoParcela()">calcular </ion-button>
+  <ion-button expand="block" id="ver-mensagem" (click)="calculoParcela()">calcular </ion-button>
 
   <ion-label class="resultado-p">{{this.p}}</ion-label>
 </ion-content>
